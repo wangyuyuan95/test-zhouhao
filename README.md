@@ -90,9 +90,17 @@ git push origin master
 - **分析**: Google Analytics
 
 ## 更新日志
+- 页面加载速度优化：通过预加载在线资源、异步调用接口、优化图片格式等方法减少传输包大小、提升页面访问速度。
 
-- 清理老项目残留：更新rss.xml中的berkeley和sangjin引用为正确的周浩教授信息，修改_layouts/post.html中的disqus配置（如果你需要使用评论功能，需要在Disqus上注册'haozhou-blog'这个shortname），更新_config.yml中的网站配置信息
-- 项目迁移到GitHub管理，编写README文档介绍项目，编辑.gitignore去除构建和缓存等不需要的信息
+- 大文件转储：pdf转为github releases存储，需根据实际github项目仓库改写index.html中的在线链接信息。
+
+- 样式文件加载方式优化：删除不需要和未引用的bootstrap、map等文件，转为CDN加载。
+
+- 清理老项目残留：删除`/_posts`文件夹和`/static/blog_images`下的示例blog文件，删除老项目部署脚本`deploy.sh`。更新`rss.xml`中的berkeley和sangjin引用为正确的周浩教授信息，修改`_layouts/post.html`中的disqus配置（如果你需要使用评论功能，需要在Disqus上注册'haozhou-blog'这个shortname），更新`_config.yml`中的网站配置信息。
+
+- 项目迁移到GitHub管理：编写`README.md`文档介绍项目，编辑`.gitignore`去除构建和缓存等不需要的信息.
+
 - added in 2020: I have used the bibtex-js to manage my paper list, please refer to [bibtex-js](https://github.com/pcooksey/bibtex-js) and [lileicc](https://github.com/lileicc/lileicc.github.io) for more information.
+
 - Source code for my [homepage](http://zhouh.github.io/), which is forked from [sangjinhan](https://github.com/sangjinhan/homepage).Many thanks to [sangjinhan](https://github.com/sangjinhan/homepage).
 

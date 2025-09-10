@@ -1,0 +1,171 @@
+---
+layout: default
+section: publications
+title: "Hao Zhou: Publications"
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+    <meta http-equiv="cache-control" content="no-cache" /> 
+    <title> 
+      Hao Zhou's Publications
+    </title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bibtex_js.js" type="text/javascript" charset="utf-8"></script>
+    <bibtex src="haos.bib"></bibtex>
+    
+    <script>
+		$(function() {
+		  $("#Fontselector").on("change",function() {
+		    var font = $("#Fontselector option:selected").text();
+		    console.log(font);
+		
+		    $('.title.fonters').each(function() {
+		    	$(this).css("font-family",font);
+		    });
+		  }); 
+		});   
+		function reset() {
+			$("select").each(function () {
+			  localStorage.setItem($(this).attr("id"),"");
+			  $(this).val("");
+			}); 
+			$("#searchbar").val("");
+			$("#searchbar").trigger('change');
+		}
+    </script>
+    
+    <style>
+	    html,body,span,h1 {
+	    	/*font-family: "Times New Roman", Times, serif;*/
+	    	font-size: 17px;
+	    }
+	    bibtex { display: none; }
+	    .searchbar { margin-left:0px;}
+	    #bibtex_errors { margin-top:5px; color: red;}
+	    h1.header {margin-left:5px;}<p><p><p><p>
+	    h1.YEAR { font-size: 18px; font-weight: bold; display: inline; margin-left:8px;}
+      [class="Hao Zhou"] {
+        font-weight: bold;
+        background-color: #eeffee;
+      }
+    </style>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+  </head>
+<body>
+<a name="top"></a>
+<h1 class="header">Hao Zhou's Publications</h1>
+
+
+<div class="container-fluid">
+	<div class="searchbar">
+		<div style="float:left;">
+			<select id="topicselect" class="btn bibtex_search" style="border: 1px solid lightgrey;">
+			  <option value="">Topic</option>
+			  <!-- Add topic values here -->
+			  <option value="Structured-Prediction|parsing|structured">Structured-Prediction</option>
+        <option value="Text Generation|generation|generating|machine translation">Text Generation</option>
+        <option value="Parsing|parsing">Parsing</option>
+        <option value="Drug Discovery|drug|protein">Drug Discovery</option>
+        <option value="Representation Learning|embedding|representation">Representation Learning</option>
+        <option value="Non-Autoregressive Generation|parallel|non-autoregressive|duplex">Non-Autoregressive Generation</option>
+			</select>
+		</div>
+		<div style="float:left;">
+			<input type="text" class="bibtex_search form-control" id="searchbar" placeholder="Search publications">
+		</div>
+    <div><font size="3">&nbsp&nbsp<a href="https://dblp.uni-trier.de/pid/63/778-12.html">DBLP</a> & <a href="https://scholar.google.com/citations?hl=zh-CN&user=XEgaCScAAAAJ&view_op=list_works&gmla=AJsN-F44OQLtIK-bb9nTc0D_8RvRk0fMXjU4YID5MWDQpCLSit19URYowi4IONpHePIgChrR9GXd-twexJLKCa-INOJlI2YpE38tN4Z9EzCyZsAE7LKuejxljFZ5oz0xtOcMKt4GhaLTAVIrUbPyASBB-ePsnMtr5A">Google Schorlar</a></font></div>
+	</div>
+</div>
+
+<br>
+<p><p><font size="3" color="tomato">* indicates intern author in Bytedance.</font>
+
+
+<div class="bibtex_structure">
+  <div class="group year" extra="DESC string">
+    <!-- <a href="#top" style="display: inline"><em>(Top of the page)</em></a> -->
+      <div style="padding-bottom:10px;"></div>
+      <div class="sort journal" extra="DESC string">
+        <div class="templates"></div>
+      </div>
+  </div>
+</div>
+
+<div id="bibtex_display">
+  
+  <div class="if bibtex_template" style="display: none;">
+    <ul> <li>
+      <span class="if journal !nolink">
+        <a class="bibtexVar" href="http://www.cs.cmu.edu/~mmv/papers/+BIBTEXKEY+.pdf" extra="BIBTEXKEY">
+            <span style="text-decoration: underline;" class="title"></span>,
+        </a>
+      </span>
+      <span class="if title"><font size="5" color="blue"><span class="title"></span></font></span>
+
+      <!-- <div class="if student">AAA</div> -->
+
+      <div class="if author">
+        <span class="if student"><font size="4" color="tomato">*</font></span><span class="author"></span>
+      </div>
+      <div>
+        <span class="if journal"><em><span class="journal"></span></em>,</span>
+        <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+        <span class="if editor"><span class="editor"></span> (editors),</span>
+        <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+        <span class="if institution"><span class="institution"></span>,</span>
+        <span class="if address"><span class="address"></span>,</span>
+        <span class="if volume"><span class="volume"></span>,</span>
+        <span class="if journal number">(<span class="number"></span>),</span>
+        <span class="if pages"> pages <span class="pages"></span>,</span>
+        <span class="if month"><span class="month"></span>,</span>
+        <span class="if year"><span class="year"></span>.</span>
+        <span class="if note"><font color="red"><span class="note"></span></font></span>
+      </div>
+      <div>
+      <span class="if comment"><div><span class="comment"></span></div></span>
+      <span><a class="bibtexVar label label-success" role="button" data-toggle="collapse" href="#bib+BIBTEXKEY+"
+                aria-expanded="false"
+                aria-controls="bib+BIBTEXKEY+"
+                extra="BIBTEXKEY">Bib</a>
+      </span>
+      <span class="if eprint"><a class="bibtexVar label label-primary" href="+EPRINT+" role="button" extra="eprint">paper</a></span>
+              <span class="if url"><a class="bibtexVar label label-warning" href="+URL+" role="button" extra="url">url</a></span>
+              <span class="if software"><a class="bibtexVar label label-danger" href="+SOFTWARE+" role="button"
+                  extra="software">Software</a></span>
+              <span class="if code"><a class="bibtexVar label label-danger" href="+CODE+" role="button" extra="code">code</a></span>
+              <span class="if slides"><a class="bibtexVar label label-warning" href="+SLIDES+" role="button" extra="slides">slides</a></span>
+              <span class="if abstract">
+              <a class="bibtexVar label label-default" role="button" data-toggle="collapse" href="#abs+BIBTEXKEY+"
+aria-expanded="false"
+aria-controls="abs+BIBTEXKEY+"
+extra="BIBTEXKEY">Abstract</a>
+              </span>
+      </div>
+      <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+      <div class="well">
+        <pre><span class="bibtexraw noread"></span></pre>
+      </div>
+    </div>
+    <div class="bibtexVar collapse" id="abs+BIBTEXKEY+" extra="BIBTEXKEY">
+              <div>
+                <pre><span class="abstract"></span></pre>
+              </div>
+            </div>
+      <div style="display:none"><span class="bibtextype"></span></div>
+      <div style="display:none"><span class="if topic"><span class="topic"></span></span></div>
+    </li></ul>
+  </div>
+  
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
